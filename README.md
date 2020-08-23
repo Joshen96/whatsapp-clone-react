@@ -25,6 +25,8 @@ firebase login
  
 firebase init
 
+npm run build
+
 ## WebApp Deploy
 
 firebase deploy

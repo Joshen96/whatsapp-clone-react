@@ -66,7 +66,13 @@ function Chat(props) {
 
                 <div className="chat__headerInfo">
                     <h3>{roomName}</h3>
-                    <p>Last seen at ...</p>
+                    <p>
+                        last seen{' '}
+                        {new Date(
+                            messages[messages.length-1]
+                                ?.timestamp?.toDate()
+                        ).toUTCString()}
+                    </p>
                 </div>
 
                 <div className="chat__headerRight">
@@ -87,8 +93,9 @@ function Chat(props) {
                     <p className={
                         `chat__message ${
                             message.name === user.displayName
-                            && 'chat__reciever'}`
-                    }>
+                            && 'chat__reciever'
+                        }`}
+                    >
                         <span className="chat__name">{message.name}</span>
                         {message.message}
                         <span className="chat__timestamp">
