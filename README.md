@@ -14,6 +14,7 @@ You will also see any lint errors in the console.
 
 ## Firebase CLI Install
 
+npm i firebase
 npm install -g firebase-tools
 
 ## Google Login
